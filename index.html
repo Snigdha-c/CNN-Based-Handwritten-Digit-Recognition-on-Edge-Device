@@ -23,6 +23,7 @@
     <h3 id="status">Loading model...</h3>
     <h3 id="result"></h3>
 
+    <!-- ONNX Runtime Web -->
     <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
 
     <script>
@@ -85,9 +86,9 @@
 
             for(let i=0;i<28*28;i++){
                 const r=imgData.data[i*4], g=imgData.data[i*4+1], b=imgData.data[i*4+2];
-                const gray=0.299*r+0.587*g+0.114*b;
-                // Normalize and invert: white digit on black
-                input[i] = gray/255; // already white digit on black background
+                const gray = 0.299*r + 0.587*g + 0.114*b;
+                // Normalize and invert for white digit on black
+                input[i] = gray/255; 
             }
             return new ort.Tensor('float32', input, [1,28,28,1]);
         }
@@ -106,7 +107,6 @@
                 resultEl.innerText = "Prediction failed!";
             }
         });
-
     </script>
 </body>
 </html>
