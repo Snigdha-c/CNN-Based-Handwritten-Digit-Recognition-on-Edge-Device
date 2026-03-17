@@ -3,6 +3,9 @@
 ## 📌 Project Overview
 This project implements a Convolutional Neural Network (CNN) to classify and predict handwritten digits (0–9) using the MNIST dataset. The built model is then deployed on an edge device(Android phone) and live testing of hand written digits is implemented.
 
+## Project Link
+https://snigdha-c.github.io/CNN-Based-Handwritten-Digit-Recognition-on-Edge-Device/
+
 ## Project Flow
 Train CNN using TensorFlow on MNIST Dataset
        ↓
